@@ -12,6 +12,10 @@
 #include "common.h"
 #include "freetype.h"
 
+/*
+     * Arkanoid (opengl). 
+     * @author Arkhipov A. 
+                              */
 
 //font
 freetype::font_data font; 
