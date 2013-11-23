@@ -46,14 +46,7 @@ void make_dlist ( FT_Face face, char ch, GLuint list_base, GLuint* tex_base ) {
 	//Allocate memory for the texture data.
 	GLubyte* expanded_data = new GLubyte[ 2 * width * height];
 
-	//Here we fill in the data for the expanded bitmap.
-	//Notice that we are using two channel bitmap (one for
-	//luminocity and one for alpha), but we assign
-	//both luminocity and alpha to the value that we
-	//find in the FreeType bitmap. 
-	//We use the ?: operator so that value which we use
-	//will be 0 if we are in the padding zone, and whatever
-	//is the the Freetype bitmap otherwise.
+	
 	for(int j = 0; j < height; j++) {
 		for(int i = 0; i < width; i++){
 			expanded_data[2*(i+j*width)] = expanded_data[2*(i+j*width)+1] = 
@@ -94,13 +87,7 @@ void make_dlist ( FT_Face face, char ch, GLuint list_base, GLuint* tex_base ) {
 	//(this is only true for characters like 'g' or 'y'.
 	glTranslatef(0,bitmap_glyph->top-bitmap.rows,0);
 
-	//Now we need to account for the fact that many of
-	//our textures are filled with empty padding space.
-	//We figure what portion of the texture is used by 
-	//the actual character and store that information in 
-	//the x and y variables, then when we draw the
-	//quad, we will only reference the parts of the texture
-	//that we contain the character itself.
+	
 	float	x = (float)bitmap.width / (float)width,
 			y = (float)bitmap.rows / (float)height;
 
@@ -226,12 +213,6 @@ void print(const font_data &ft_font, float x, float y, const char *fmt, ...)  {
 	}
 
 
-	//Here is some code to split the text that we have been
-	//given into a set of lines.  
-	//This could be made much neater by using
-	//a regular expression library such as the one avliable from
-	//boost.org (I've only done it out by hand to avoid complicating
-	//this tutorial with unnecessary library dependencies).
 	const char *start_line=text;
 	const char *c;
 	std::vector<std::string> lines;
@@ -262,13 +243,7 @@ void print(const font_data &ft_font, float x, float y, const char *fmt, ...)  {
 	float modelview_matrix[16];	
 	glGetFloatv(GL_MODELVIEW_MATRIX, modelview_matrix);
 
-	//This is where the text display actually happens.
-	//For each line of text we reset the modelview matrix
-	//so that the line's text will start in the correct position.
-	//Notice that we need to reset the matrix, rather than just translating
-	//down by h. This is because when each character is
-	//draw it modifies the current matrix so that the next character
-	//will be drawn immediatly after it.  
+
 	for(int i = 0;i < lines.size();i++) {
 		
 
