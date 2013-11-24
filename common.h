@@ -3,9 +3,9 @@
 
 #include"stdafx.h"
 
-GLfloat spec[] = {1.0f, 1.0f ,1.0f ,1.0f };      //sets specular highlight of balls (отражение мяча)
-GLfloat posl[] = {0,0,1000};               //position of ligth source (положение источника)
-GLfloat amb[] = {0.2f, 0.2f, 0.2f ,1.0f};   //global ambient (окружение)
+GLfloat spec[] = {1.0f, 1.0f ,1.0f ,1.0f };      //sets specular highlight of balls 
+GLfloat posl[] = {0,0,1000};               //position of ligth source 
+GLfloat amb[] = {0.2f, 0.2f, 0.2f ,1.0f};   //global ambient 
 GLfloat amb2[] = {0.3f, 0.3f, 0.3f ,1.0f};  //ambient of lightsource
 
 GLUquadricObj* cylinder_obj;              //Quadratic object to render the cylinders
@@ -37,7 +37,7 @@ bool gof = false;
 bool bflag = false;
 int flag = 0;
 
-float score = 0;       // score
+float score = 0;     
 BOOL gameOver = FALSE;
 	
 bool			keys[256];			
