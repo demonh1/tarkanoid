@@ -1,7 +1,5 @@
 #include "tray.h"
-
-#include <math.h>
-
+#include <сmath>
 #include "mathex.h"
 
 using namespace std;
