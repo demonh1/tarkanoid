@@ -149,7 +149,6 @@ TVector &TVector::multiply(const TVector &v1, const double &scale, TVector &resu
 
 
 // Streaming
-
 std::ostream &TVector::write(std::ostream &out) const {
 
 	if (isValid())
