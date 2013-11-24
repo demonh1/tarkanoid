@@ -23,9 +23,7 @@ TVector &TVector::unit() {
 		if (rep < EPSILON) {
 
 			_x = 0.0;
-
 			_y = 0.0;
-
 			_z = 0.0;
 
 		} else {
