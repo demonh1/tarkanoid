@@ -43,7 +43,7 @@ void LoadGLTextures();
 void InitVars();
 void idle();
 
-HDC				hDC = NULL;			
+HDC			hDC = NULL;			
 HGLRC			hRC = NULL;		
 HWND			hWnd = NULL;			
 HINSTANCE		hInstance;		
@@ -62,9 +62,7 @@ LRESULT	CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 GLvoid ReSizeGLScene(GLsizei width, GLsizei height)		
 {
 	if (height == 0)										
-	{
 		height = 1;										
-	}
 
 	glViewport(0,0,width,height);						
 
