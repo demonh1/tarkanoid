@@ -16,7 +16,7 @@
      * @author Arkhipov A. 
                               */
 
-//font
+//font 
 freetype::font_data font; 
 freetype::font_data font1; 
 
