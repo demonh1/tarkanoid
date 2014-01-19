@@ -1,5 +1,5 @@
 #include "tray.h"
-#include <сmath>
+#include <cmath>
 #include "mathex.h"
 
 TRay::TRay(const TVector &point1, const TVector &point2)
