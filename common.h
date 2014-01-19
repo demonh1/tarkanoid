@@ -13,20 +13,15 @@ GLuint texture[5], dlist;                 //stores texture objects and display l
 GLuint	base;
 
 
-const int PLANE_COUNT = 4;
-const int  PLANE_POS = 610;
 const int BALL_RADIUS = 14;
 
-const int PADDLE_LENGTH = 100;
-const int PADDLE_HEIGHT = 10;
-const int PADDLE_INITY = -400;
+enum Plane { PLANE_COUNT = 4, PLANE_POS = 610 };
 
-const int TARGET_HEIGHT = 60;
-const int TARGET_LENGTH = 80;
-const int TARGET_SPACE = 30;
+enum Paddle { PADDLE_LENGTH = 100, PADDLE_HEIGHT = 10, PADDLE_INITY = -400};
 
-const int TARGET_ROW_COUNT = 4;
-const int TARGET_COLUMN_COUNT = 10;
+enum {TARGET_HEIGHT = 60, TARGET_LENGTH = 80, TARGET_SPACE = 30};
+enum TargetCount {TARGET_ROW_COUNT = 4, TARGET_COLUMN_COUNT = 10 };
+
 
 const int cor = 60;
 
