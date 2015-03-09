@@ -33,7 +33,7 @@ static unsigned int getshort(FILE* fp)
     
 
 
-int ImageLoad(char* filename, Image* image) {
+int ImageLoad(const char* filename, Image* image) {
     FILE* file;
     unsigned long size;                 /* size of the image in bytes.*/
     unsigned long i;                    /* standard counter.*/
