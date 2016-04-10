@@ -2,10 +2,8 @@
 #include <cmath>
 #include "mathex.h"
 
-TRay::TRay(const TVector &point1, const TVector &point2)
-
-: _P(point1) {
-
+TRay::TRay(const TVector &point1, const TVector &point2) : _P(point1) 
+{
 	_V = (point2.isUnit() ? point2 : TVector::unit(point2-point1));
 }
 
